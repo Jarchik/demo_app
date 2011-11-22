@@ -19,6 +19,8 @@ end
 gem 'jquery-rails'
 gem 'execjs'
 gem 'therubyracer'
+gem 'gm'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -32,7 +34,13 @@ gem 'therubyracer'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'sqlite3'	
+end
+
+group :production do
+  # Postgres
+  gem 'pg'
 end
